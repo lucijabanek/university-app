@@ -1,0 +1,2140 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "University API",
+    "description": "Description",
+    "version": "1.0.0"
+  },
+  "servers": [
+    {
+      "url": "http://localhost:3000/"
+    }
+  ],
+  "paths": {
+    "/api/v1/students/": {
+      "get": {
+        "tags": [
+          "Student"
+        ],
+        "description": "",
+        "parameters": [
+          {
+            "name": "include",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "page",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "size",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Student"
+        ],
+        "description": "",
+        "parameters": [],
+        "responses": {
+          "201": {
+            "description": "Created"
+          }
+        }
+      }
+    },
+    "/api/v1/students/{id}": {
+      "get": {
+        "tags": [
+          "Student"
+        ],
+        "description": "",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "include",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "Student"
+        ],
+        "description": "",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "202": {
+            "description": "Accepted"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Student"
+        ],
+        "description": "",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "No Content"
+          }
+        }
+      }
+    },
+    "/api/v1/students/{id}/enrollments": {
+      "get": {
+        "tags": [
+          "Student"
+        ],
+        "description": "",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "page",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "size",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/v1/students/me/results": {
+      "get": {
+        "tags": [
+          "Student"
+        ],
+        "description": "",
+        "parameters": [
+          {
+            "name": "authorization",
+            "in": "header",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "page",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "size",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/v1/professors/": {
+      "get": {
+        "tags": [
+          "Professor"
+        ],
+        "description": "",
+        "parameters": [
+          {
+            "name": "include",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "page",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "size",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Professor"
+        ],
+        "description": "",
+        "parameters": [],
+        "responses": {
+          "201": {
+            "description": "Created"
+          }
+        }
+      }
+    },
+    "/api/v1/professors/{id}": {
+      "get": {
+        "tags": [
+          "Professor"
+        ],
+        "description": "",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "include",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "Professor"
+        ],
+        "description": "",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "202": {
+            "description": "Accepted"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Professor"
+        ],
+        "description": "",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "No Content"
+          }
+        }
+      }
+    },
+    "/api/v1/professors/{id}/courses": {
+      "get": {
+        "tags": [
+          "Professor"
+        ],
+        "description": "",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "page",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "size",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/v1/courses/": {
+      "get": {
+        "tags": [
+          "Courses"
+        ],
+        "summary": "Get all courses",
+        "description": "",
+        "parameters": [
+          {
+            "name": "include",
+            "in": "query",
+            "description": "Include associated table. (major and/or professor)",
+            "require": false,
+            "schema": {
+              "type": "array"
+            }
+          },
+          {
+            "name": "page",
+            "in": "query",
+            "description": "Parameter for scrolling through the pages, must be a positive integer",
+            "require": false,
+            "schema": {
+              "type": "integer"
+            }
+          },
+          {
+            "name": "size",
+            "in": "query",
+            "description": "Parameter to limit data on one page, must be a positive integer equal or greater than 1",
+            "require": false,
+            "schema": {
+              "type": "integer"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Courses were successfully displayed",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AllCoursesResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Error: Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ValidationError"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Error: Internal Server Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ServerError"
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Courses"
+        ],
+        "summary": "Create new course",
+        "description": "",
+        "parameters": [],
+        "responses": {
+          "201": {
+            "description": "Course created successfully",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CourseResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Error: Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ValidationError"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Error: Internal Server Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ServerError"
+                }
+              }
+            }
+          }
+        },
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CourseRequest"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/courses/{id}": {
+      "get": {
+        "tags": [
+          "Courses"
+        ],
+        "summary": "Get one course",
+        "description": "",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer"
+            },
+            "description": "Include course ID to get specific information",
+            "require": true
+          },
+          {
+            "name": "include",
+            "in": "query",
+            "description": "Include associated table. (major and/or professor)",
+            "require": false,
+            "schema": {
+              "type": "array"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Course was successfully displayed",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CourseResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Error: Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ValidationError"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Error: Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/NotFoundError"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Server error ocurred",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ServerError"
+                }
+              }
+            }
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "Courses"
+        ],
+        "summary": "Update course",
+        "description": "",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer"
+            },
+            "description": "Include course ID to update specific information",
+            "require": true
+          }
+        ],
+        "responses": {
+          "202": {
+            "description": "Course updated successfully",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CourseResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Error: Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ValidationError"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Error: Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/NotFoundError"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Error: Internal Server Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ServerError"
+                }
+              }
+            }
+          }
+        },
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CourseRequest"
+              }
+            }
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Courses"
+        ],
+        "summary": "Delete course",
+        "description": "",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer"
+            },
+            "description": "Include course ID to delete specific information",
+            "require": true
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "Course deleted successfully"
+          },
+          "400": {
+            "description": "Error: Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DeleteSuccess"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Error: Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/NotFoundError"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Error: Internal Server Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ServerError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/courses/{id}/enrollments": {
+      "get": {
+        "tags": [
+          "Courses"
+        ],
+        "summary": "Get all student on specific course",
+        "description": "",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer"
+            },
+            "description": "Include course ID to get all students for specific course",
+            "require": true
+          },
+          {
+            "name": "page",
+            "in": "query",
+            "description": "Parameter for scrolling through the pages, must be a positive integer",
+            "require": false,
+            "schema": {
+              "type": "integer"
+            }
+          },
+          {
+            "name": "size",
+            "in": "query",
+            "description": "Parameter to limit data on one page, must be a positive integer equal or greater than 1",
+            "require": false,
+            "schema": {
+              "type": "integer"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Students were successfully displayed",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CourseStudents"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Error: Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ValidationError"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Error: Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/NotFoundError"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Error: Internal Server Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ServerError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/courses/{id}/professors": {
+      "get": {
+        "tags": [
+          "Courses"
+        ],
+        "summary": "Get all professors on a specific course",
+        "description": "",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer"
+            },
+            "description": "Include course ID to get all professors for specific course",
+            "require": true
+          },
+          {
+            "name": "page",
+            "in": "query",
+            "description": "Parameter for scrolling through the pages, must be a positive integer",
+            "require": false,
+            "schema": {
+              "type": "integer"
+            }
+          },
+          {
+            "name": "size",
+            "in": "query",
+            "description": "Parameter to limit data on one page, must be a positive integer equal or greater than 1",
+            "require": false,
+            "schema": {
+              "type": "integer"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Professors were successfully displayed",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CourseProfessors"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Error: Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ValidationError"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Error: Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/NotFoundError"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Error: Internal Server Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ServerError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/courses/{id}/exams": {
+      "get": {
+        "tags": [
+          "Courses"
+        ],
+        "summary": "Get all exams on a specific course",
+        "description": "",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer"
+            },
+            "description": "Include course ID to get all exams for specific course",
+            "require": true
+          },
+          {
+            "name": "page",
+            "in": "query",
+            "description": "Parameter for scrolling through the pages, must be a positive integer",
+            "require": false,
+            "schema": {
+              "type": "integer"
+            }
+          },
+          {
+            "name": "size",
+            "in": "query",
+            "description": "Parameter to limit data on one page, must be a positive integer equal or greater than 1",
+            "require": false,
+            "schema": {
+              "type": "integer"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Exams were successfully displayed",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CourseExams"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Error: Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ValidationError"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Error: Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/NotFoundError"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Error: Internal Server Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ServerError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/departments/": {
+      "get": {
+        "tags": [
+          "Department"
+        ],
+        "description": "",
+        "parameters": [
+          {
+            "name": "include",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "page",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "size",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Department"
+        ],
+        "description": "",
+        "parameters": [],
+        "responses": {
+          "201": {
+            "description": "Created"
+          }
+        }
+      }
+    },
+    "/api/v1/departments/{id}": {
+      "get": {
+        "tags": [
+          "Department"
+        ],
+        "description": "",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "include",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "Department"
+        ],
+        "description": "",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "202": {
+            "description": "Accepted"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Department"
+        ],
+        "description": "",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "No Content"
+          }
+        }
+      }
+    },
+    "/api/v1/departments/{id}/professors": {
+      "get": {
+        "tags": [
+          "Department"
+        ],
+        "description": "",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "page",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "size",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/v1/majors/": {
+      "get": {
+        "tags": [
+          "Major"
+        ],
+        "description": "",
+        "parameters": [
+          {
+            "name": "include",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "page",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "size",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Major"
+        ],
+        "description": "",
+        "parameters": [],
+        "responses": {
+          "201": {
+            "description": "Created"
+          }
+        }
+      }
+    },
+    "/api/v1/majors/{id}": {
+      "get": {
+        "tags": [
+          "Major"
+        ],
+        "description": "",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "include",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "Major"
+        ],
+        "description": "",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "202": {
+            "description": "Accepted"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Major"
+        ],
+        "description": "",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "No Content"
+          }
+        }
+      }
+    },
+    "/api/v1/majors/{id}/students": {
+      "get": {
+        "tags": [
+          "Major"
+        ],
+        "description": "",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "page",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "size",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/v1/majors/{id}/courses": {
+      "get": {
+        "tags": [
+          "Major"
+        ],
+        "description": "",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "page",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "size",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/v1/exams/": {
+      "get": {
+        "tags": [
+          "Exam"
+        ],
+        "description": "",
+        "parameters": [
+          {
+            "name": "include",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "page",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "size",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Exam"
+        ],
+        "description": "",
+        "parameters": [],
+        "responses": {
+          "201": {
+            "description": "Created"
+          }
+        }
+      }
+    },
+    "/api/v1/exams/{id}": {
+      "get": {
+        "tags": [
+          "Exam"
+        ],
+        "description": "",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "include",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "Exam"
+        ],
+        "description": "",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "202": {
+            "description": "Accepted"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Exam"
+        ],
+        "description": "",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "No Content"
+          }
+        }
+      }
+    },
+    "/api/v1/exams/{id}/results": {
+      "get": {
+        "tags": [
+          "Exam"
+        ],
+        "description": "",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "page",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "size",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/v1/enrollments/": {
+      "get": {
+        "tags": [
+          "Enrollments"
+        ],
+        "description": "",
+        "parameters": [
+          {
+            "name": "include",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "page",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "size",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Enrollments"
+        ],
+        "description": "",
+        "parameters": [],
+        "responses": {
+          "201": {
+            "description": "Created"
+          }
+        }
+      }
+    },
+    "/api/v1/enrollments/{id}": {
+      "get": {
+        "tags": [
+          "Enrollments"
+        ],
+        "description": "",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "include",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "Enrollments"
+        ],
+        "description": "",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "202": {
+            "description": "Accepted"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Enrollments"
+        ],
+        "description": "",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "No Content"
+          }
+        }
+      }
+    },
+    "/api/v1/results/": {
+      "get": {
+        "tags": [
+          "Result"
+        ],
+        "description": "",
+        "parameters": [
+          {
+            "name": "include",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "page",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "size",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Result"
+        ],
+        "description": "",
+        "parameters": [],
+        "responses": {
+          "201": {
+            "description": "Created"
+          }
+        }
+      }
+    },
+    "/api/v1/results/{id}": {
+      "get": {
+        "tags": [
+          "Result"
+        ],
+        "description": "",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "include",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "Result"
+        ],
+        "description": "",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "202": {
+            "description": "Accepted"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Result"
+        ],
+        "description": "",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "No Content"
+          }
+        }
+      }
+    },
+    "/api/v1/login/": {
+      "post": {
+        "tags": [
+          "Login"
+        ],
+        "description": "",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "email": {
+                    "example": "any"
+                  },
+                  "password": {
+                    "example": "any"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "ValidationErrorDetail": {
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "string"
+          },
+          "msg": {
+            "type": "string"
+          },
+          "param": {
+            "type": "string"
+          },
+          "location": {
+            "type": "string"
+          }
+        }
+      },
+      "ValidationError": {
+        "type": "object",
+        "properties": {
+          "message": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ValidationErrorDetail"
+            }
+          }
+        }
+      },
+      "ServerError": {
+        "type": "string",
+        "example": "Something went wrong!"
+      },
+      "NotFoundError": {
+        "type": "string",
+        "example": "No data found for ID "
+      },
+      "DeleteSuccess": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer"
+          }
+        }
+      },
+      "AllCoursesResponse": {
+        "type": "object",
+        "properties": {
+          "data": {
+            "type": "object",
+            "properties": {
+              "totalItems": {
+                "type": "integer",
+                "format": "int64"
+              },
+              "modelRows": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "integer",
+                      "format": "int64"
+                    },
+                    "name": {
+                      "type": "string"
+                    },
+                    "credit_hours": {
+                      "type": "integer",
+                      "format": "int64"
+                    },
+                    "professor_id": {
+                      "type": "integer",
+                      "format": "int64"
+                    },
+                    "major_id": {
+                      "type": "integer",
+                      "format": "int64"
+                    },
+                    "created_at": {
+                      "type": "string",
+                      "format": "date-time"
+                    },
+                    "updated_at": {
+                      "type": "string",
+                      "format": "date-time"
+                    }
+                  }
+                }
+              },
+              "totalPages": {
+                "type": "integer",
+                "format": "int64"
+              },
+              "currentPage": {
+                "type": "integer",
+                "format": "int64"
+              }
+            }
+          }
+        }
+      },
+      "CourseRequest": {
+        "type": "object",
+        "required": [
+          "name",
+          "credit_hours",
+          "professor_id",
+          "major_id"
+        ],
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "credit_hours": {
+            "type": "integer"
+          },
+          "professor_id": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "major_id": {
+            "type": "integer",
+            "format": "int64"
+          }
+        }
+      },
+      "CourseResponse": {
+        "type": "object",
+        "properties": {
+          "data": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "integer",
+                "format": "int64"
+              },
+              "name": {
+                "type": "string"
+              },
+              "credit_hours": {
+                "type": "integer",
+                "format": "int64"
+              },
+              "professor_id": {
+                "type": "integer",
+                "format": "int64"
+              },
+              "major_id": {
+                "type": "integer",
+                "format": "int64"
+              },
+              "created_at": {
+                "type": "string",
+                "format": "date-time"
+              },
+              "updated_at": {
+                "type": "string",
+                "format": "date-time"
+              }
+            }
+          }
+        }
+      },
+      "CourseStudents": {
+        "type": "object",
+        "properties": {
+          "data": {
+            "type": "object",
+            "properties": {
+              "totalItems": {
+                "type": "integer",
+                "format": "int64"
+              },
+              "modelRows": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "integer",
+                      "format": "int64"
+                    },
+                    "student_id": {
+                      "type": "integer",
+                      "format": "int64"
+                    },
+                    "course_id": {
+                      "type": "integer",
+                      "format": "int64"
+                    },
+                    "created_at": {
+                      "type": "string",
+                      "format": "date-time"
+                    },
+                    "updated_at": {
+                      "type": "string",
+                      "format": "date-time"
+                    },
+                    "student": {
+                      "type": "object",
+                      "properties": {
+                        "id": {
+                          "type": "integer",
+                          "format": "int64"
+                        },
+                        "name": {
+                          "type": "string"
+                        },
+                        "email": {
+                          "type": "string"
+                        },
+                        "address": {
+                          "type": "string"
+                        },
+                        "phone": {
+                          "type": "string"
+                        },
+                        "major_id": {
+                          "type": "integer",
+                          "format": "int64"
+                        },
+                        "user_id": {
+                          "type": "integer",
+                          "format": "int64"
+                        },
+                        "created_at": {
+                          "type": "string",
+                          "format": "date-time"
+                        },
+                        "updated_at": {
+                          "type": "string",
+                          "format": "date-time"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "totalPages": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "currentPage": {
+            "type": "integer",
+            "format": "int64"
+          }
+        }
+      },
+      "CourseProfessors": {
+        "type": "object",
+        "properties": {
+          "data": {
+            "type": "object",
+            "properties": {
+              "totalItems": {
+                "type": "integer",
+                "format": "int64"
+              },
+              "modelRows": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "integer",
+                      "format": "int64"
+                    },
+                    "name": {
+                      "type": "string"
+                    },
+                    "credit_hours": {
+                      "type": "integer",
+                      "format": "int64"
+                    },
+                    "professor_id": {
+                      "type": "integer",
+                      "format": "int64"
+                    },
+                    "major_id": {
+                      "type": "integer",
+                      "format": "int64"
+                    },
+                    "created_at": {
+                      "type": "string",
+                      "format": "date-time"
+                    },
+                    "updated_at": {
+                      "type": "string",
+                      "format": "date-time"
+                    },
+                    "professor": {
+                      "type": "object",
+                      "properties": {
+                        "id": {
+                          "type": "integer",
+                          "format": "int64"
+                        },
+                        "name": {
+                          "type": "string"
+                        },
+                        "email": {
+                          "type": "string"
+                        },
+                        "address": {
+                          "type": "string"
+                        },
+                        "phone": {
+                          "type": "string"
+                        },
+                        "department_id": {
+                          "type": "integer",
+                          "format": "int64"
+                        },
+                        "user_id": {
+                          "type": "integer",
+                          "format": "int64"
+                        },
+                        "created_at": {
+                          "type": "string",
+                          "format": "date-time"
+                        },
+                        "updated_at": {
+                          "type": "string",
+                          "format": "date-time"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "totalPages": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "currentPage": {
+            "type": "integer",
+            "format": "int64"
+          }
+        }
+      },
+      "CourseExams": {
+        "type": "object",
+        "properties": {
+          "data": {
+            "type": "object",
+            "properties": {
+              "totalItems": {
+                "type": "integer",
+                "format": "int64"
+              },
+              "modelRows": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "integer",
+                      "format": "int64"
+                    },
+                    "name": {
+                      "type": "string"
+                    },
+                    "credit_hours": {
+                      "type": "integer",
+                      "format": "int64"
+                    },
+                    "professor_id": {
+                      "type": "integer",
+                      "format": "int64"
+                    },
+                    "major_id": {
+                      "type": "integer",
+                      "format": "int64"
+                    },
+                    "created_at": {
+                      "type": "string",
+                      "format": "date-time"
+                    },
+                    "updated_at": {
+                      "type": "string",
+                      "format": "date-time"
+                    },
+                    "exams": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "id": {
+                            "type": "integer",
+                            "format": "int64"
+                          },
+                          "name": {
+                            "type": "string"
+                          },
+                          "date_time": {
+                            "type": "string",
+                            "format": "date-time"
+                          },
+                          "course_id": {
+                            "type": "integer",
+                            "format": "int64"
+                          },
+                          "created_at": {
+                            "type": "string",
+                            "format": "date-time"
+                          },
+                          "updated_at": {
+                            "type": "string",
+                            "format": "date-time"
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "totalPages": {
+                "type": "integer",
+                "format": "int64"
+              },
+              "currentPage": {
+                "type": "integer",
+                "format": "int64"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
